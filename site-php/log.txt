@@ -1,0 +1,34 @@
+[2024-07-19 02:49:51] Request URI: /index.php, Method: POST
+[2024-07-19 02:49:52] Data inserted into MySQL successfully.
+[2024-07-19 02:50:03] Request URI: /index.php, Method: GET
+[2024-07-19 02:50:03] Filters applied: name=%, email=%, phone_number=%, is_viewed=%
+[2024-07-19 02:50:03] Data retrieved successfully.
+[2024-07-19 02:50:04] Request URI: /index.php, Method: GET
+[2024-07-19 02:50:04] Filters applied: name=%, email=%, phone_number=%, is_viewed=%
+[2024-07-19 02:50:04] Data retrieved successfully.
+[2024-07-19 02:50:25] Request URI: /index.php, Method: GET
+[2024-07-19 02:50:26] Request URI: /index.php, Method: GET
+[2024-07-19 02:50:33] Request URI: /index.php, Method: GET
+[2024-07-19 02:51:04] Request URI: /index.php, Method: GET
+[2024-07-19 02:51:23] Request URI: /index.php, Method: GET
+[2024-07-19 02:51:23] Filters applied: name=%, email=%, phone_number=%, is_viewed=%
+[2024-07-19 02:51:23] Data retrieved successfully.
+[2024-07-19 02:51:24] Request URI: /index.php, Method: GET
+[2024-07-19 02:51:24] Filters applied: name=%, email=%, phone_number=%, is_viewed=%
+[2024-07-19 02:51:24] Data retrieved successfully.
+[2024-07-19 02:51:33] Request URI: /index.php, Method: GET
+[2024-07-19 02:51:33] Filters applied: name=%, email=%, phone_number=%, is_viewed=%
+[2024-07-19 02:51:33] Data retrieved successfully.
+[2024-07-19 02:51:36] Request URI: /index.php, Method: GET
+[2024-07-19 02:51:36] Filters applied: name=%, email=%, phone_number=%, is_viewed=%
+[2024-07-19 02:51:36] Data retrieved successfully.
+[2024-07-19 02:53:35] Request URI: /index.php, Method: GET
+[2024-07-19 02:53:36] Filters applied: name=%, email=%, phone_number=%, is_viewed=%
+[2024-07-19 02:53:36] Data retrieved successfully.
+[2024-07-19 02:53:37] Request URI: /index.php, Method: GET
+[2024-07-19 02:53:38] Filters applied: name=%, email=%, phone_number=%, is_viewed=%
+[2024-07-19 02:53:38] Data retrieved successfully.
+[2024-07-19 02:55:53] Request URI: /index.php, Method: GET
+[2024-07-19 02:55:55] Request URI: /index.php, Method: GET
+[2024-07-19 02:56:23] Request URI: /index.php, Method: POST
+[2024-07-19 02:56:23] Data inserted into MySQL successfully.

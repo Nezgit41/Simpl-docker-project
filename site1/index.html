@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            max-width: 1320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reload-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reload-button:hover {
+            background-color: #45a049;
+        }
+        
+        th:nth-child(4), td:nth-child(4) { 
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback List</h1>
+
+    <!-- Table to display feedback -->
+    <table id="feedbackTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Viewed</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!-- Button to reload feedback data -->
+    <div class="button-container">
+        <button class="reload-button" onclick="reloadFeedback()">Reload</button>
+    </div>
+
+    <!-- Script to fetch and display feedback data -->
+    <script>
+        function reloadFeedback() {
+            fetch('index.php')
+                .then(response => response.json())
+                .then(feedbackData => {
+                    const feedbackTableBody = document.querySelector('#feedbackTable tbody');
+                    feedbackTableBody.innerHTML = ''; 
+
+                    feedbackData.forEach(feedback => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${feedback.name}</td>
+                            <td>${feedback.phone_number}</td>
+                            <td>${feedback.email}</td>
+                            <td>${feedback.text}</td>
+                            <td>${feedback.is_viewed}</td>
+                        `;
+                        feedbackTableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching feedback data:', error));
+        }
+
+        reloadFeedback();
+    </script>
+</body>
+</html>
