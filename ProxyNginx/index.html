@@ -58,6 +58,7 @@
 <body>
     <h1>Write feedback:</h1>
 
+<<<<<<< HEAD
     <!-- Form for Data Submission -->
     <form id="feedbackForm" action="/index.php" method="POST">
         <!-- Name -->
@@ -108,3 +109,50 @@
     </script>
 </body>
 </html>
+=======
+<!-- Form for Data Submission -->
+<form id="feedbackForm" action="/index.php" method="POST">
+    <!-- Name -->
+    <label for="inputName">Name:</label>
+    <input type="text" id="inputName" name="name" placeholder="Enter your name" required>
+
+    <!-- Phone number -->
+    <label for="inputPhoneNumber">Phone Number:</label>
+    <input type="tel" id="inputPhoneNumber" name="phoneNumber" placeholder="Enter your phone number" 
+            pattern="^\+?[78][0-9]{10}$" 
+            title="Please enter a valid Russian phone number (starting with +7 or 8, followed by 10 digits)" 
+    required>
+
+    <!-- E-mail -->
+    <label for="inputEmail">E-mail:</label>
+    <input type="email" id="inputEmail" name="email" placeholder="Enter your email" required>
+
+    <!-- Message text -->
+    <label for="inputText">Text of feedback:</label>
+    <input type="text" id="inputText" name="text" placeholder="Enter text for your feedback"
+            maxlength="1000" 
+    required>
+
+    <!-- Button for Site 1 -->
+    <button type="submit">Submit</button>
+</form>
+
+<div id="message"></div>
+
+<script>
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const result = await fetch("/index.php", {
+            body: formData,
+            method: "POST"
+        });
+        const message = await result.text();
+        alert(message);
+    });
+    </script>
+</body>
+</html>
+>>>>>>> 9cb1714ccbf9b4067db202131a835dad28569354
