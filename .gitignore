@@ -1,3 +1,4 @@
 ﻿.idea
 mysql_data/
 site-php/login_sql.env
+ProxyNginx/ssl
